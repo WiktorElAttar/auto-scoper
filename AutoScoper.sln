@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoScoper", "src\AutoScoper\AutoScoper.csproj", "{5D3022FD-B21A-4051-9CBF-64D90B4F0C90}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{AEF4CADB-5BB4-4368-8684-E8957A9B50FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoScopper.Tests.Unit", "tests\AutoScopper.Tests.Unit\AutoScopper.Tests.Unit.csproj", "{832E498A-0BCB-428E-960B-A24E214BD4CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,12 @@ Global
 		{5D3022FD-B21A-4051-9CBF-64D90B4F0C90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D3022FD-B21A-4051-9CBF-64D90B4F0C90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D3022FD-B21A-4051-9CBF-64D90B4F0C90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{832E498A-0BCB-428E-960B-A24E214BD4CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{832E498A-0BCB-428E-960B-A24E214BD4CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{832E498A-0BCB-428E-960B-A24E214BD4CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{832E498A-0BCB-428E-960B-A24E214BD4CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{832E498A-0BCB-428E-960B-A24E214BD4CC} = {AEF4CADB-5BB4-4368-8684-E8957A9B50FD}
 	EndGlobalSection
 EndGlobal
