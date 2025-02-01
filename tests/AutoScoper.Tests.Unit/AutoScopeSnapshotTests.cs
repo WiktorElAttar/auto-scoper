@@ -7,6 +7,8 @@ public class AutoScopeSnapshotTests
     {
         var source = """
                      using AutoScoper;
+                     
+                     namespace TestNamespace;
 
                      [AutoScope]
                      public partial class Test
@@ -21,6 +23,8 @@ public class AutoScopeSnapshotTests
     public Task ShouldGenerate_WhenClassIsMarkedWithAttribute_UsingFullName()
     {
         var source = """
+                     namespace TestNamespace;
+                     
                      [AutoScoper.AutoScope]
                      public partial class Test
                      {
@@ -34,6 +38,25 @@ public class AutoScopeSnapshotTests
     public Task ShouldNotGenerate_WhenClassIsMarkedWithAttribute_WithoutNamespaceImport()
     {
         var source = """
+                     namespace TestNamespace;
+                     
+                     [AutoScope]
+                     public partial class Test
+                     {
+                     }
+                     """;
+
+        return TestHelper.Verify(source);
+    }
+
+    [Fact]
+    public Task ShouldNotGenerate_WhenClassIsMarkedWithAttribute_InComplexNamespace()
+    {
+        var source = """
+                     using AutoScoper;
+                     
+                     namespace TestNamespace.Complex.Nested;
+
                      [AutoScope]
                      public partial class Test
                      {

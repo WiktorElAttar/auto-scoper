@@ -27,7 +27,7 @@ public class AutoScopeGenerator: IIncrementalGenerator
     }
 
     private static ScopeDetails CreateAutoScopeDetails(GeneratorAttributeSyntaxContext ctx)
-        => new (ctx.TargetSymbol.Name);
+        => new (ctx.TargetSymbol.Name, ctx.TargetSymbol.ContainingNamespace.ToString());
 
     private static void Execute(SourceProductionContext ctx, ScopeDetails scopeDetails)
     {
@@ -43,6 +43,8 @@ public class AutoScopeGenerator: IIncrementalGenerator
         var sb = new StringBuilder();
 
         sb.Append($$"""
+namespace {{scopeDetails.NamespaceName}};
+
 public partial class {{scopeDetails.ClassName}}
 {
     public int GetInt() => 1;
@@ -53,8 +55,11 @@ public partial class {{scopeDetails.ClassName}}
     }
 }
 
-public class ScopeDetails(string className)
+public class ScopeDetails(
+    string className,
+    string namespaceName)
 {
     public string ClassName { get; } = className;
+    public string NamespaceName { get; } = namespaceName;
 };
 

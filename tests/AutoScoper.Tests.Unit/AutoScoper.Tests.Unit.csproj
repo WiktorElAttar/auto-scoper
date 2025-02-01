@@ -31,4 +31,8 @@
       <ProjectReference Include="..\..\src\AutoScoper\AutoScoper.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Snapshots\" />
+    </ItemGroup>
+
 </Project>
