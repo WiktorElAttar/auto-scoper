@@ -1,8 +1,7 @@
-﻿using AutoScoper;
-using Microsoft.CodeAnalysis;
+﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 
-namespace AutoScopper.Tests.Unit;
+namespace AutoScoper.Tests.Unit;
 
 public static class TestHelper
 {

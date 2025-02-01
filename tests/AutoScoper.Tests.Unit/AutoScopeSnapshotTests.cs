@@ -1,4 +1,4 @@
-﻿namespace AutoScopper.Tests.Unit;
+﻿namespace AutoScoper.Tests.Unit;
 
 public class AutoScopeSnapshotTests
 {

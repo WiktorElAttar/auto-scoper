@@ -1,6 +1,6 @@
 ﻿using System.Runtime.CompilerServices;
 
-namespace AutoScopper.Tests.Unit;
+namespace AutoScoper.Tests.Unit;
 
 public static class ModuleInitializer
 {

@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoScoper", "src\AutoScope
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{AEF4CADB-5BB4-4368-8684-E8957A9B50FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoScopper.Tests.Unit", "tests\AutoScopper.Tests.Unit\AutoScopper.Tests.Unit.csproj", "{832E498A-0BCB-428E-960B-A24E214BD4CC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoScoper.Tests.Unit", "tests\AutoScoper.Tests.Unit\AutoScoper.Tests.Unit.csproj", "{832E498A-0BCB-428E-960B-A24E214BD4CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
