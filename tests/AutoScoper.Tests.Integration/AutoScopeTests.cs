@@ -8,10 +8,7 @@ public class AutoScopeTests
         // Arrange
         var sut = new TestClass();
 
-        // Act
-        var result = sut.GetInt();
-
-        // Assert
-        Assert.Equal(1, result);
+        // Act & Assert
+        Assert.Throws<NotImplementedException>(() => sut.GetInt(1, ""));
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace AutoScoper.Tests.Integration;
 
-[AutoScope]
+[AutoScope(typeof(ITestInterface))]
 public partial class TestClass
 {
 }

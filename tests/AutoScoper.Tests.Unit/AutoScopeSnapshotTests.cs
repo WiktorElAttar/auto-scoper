@@ -10,9 +10,14 @@ public class AutoScopeSnapshotTests
                      
                      namespace TestNamespace;
 
-                     [AutoScope]
+                     [AutoScope(typeof(ITestInterface))]
                      public partial class Test
                      {
+                     }
+                     
+                     public interface ITestInterface
+                     {
+                         int GetInt();
                      }
                      """;
 
@@ -25,9 +30,14 @@ public class AutoScopeSnapshotTests
         var source = """
                      namespace TestNamespace;
                      
-                     [AutoScoper.AutoScope]
+                     [AutoScoper.AutoScope(typeof(ITestInterface))]
                      public partial class Test
                      {
+                     }
+                     
+                     public interface ITestInterface
+                     {
+                         int GetInt(int a, string asd);
                      }
                      """;
 
@@ -40,9 +50,14 @@ public class AutoScopeSnapshotTests
         var source = """
                      namespace TestNamespace;
                      
-                     [AutoScope]
+                     [AutoScope(typeof(ITestInterface))]
                      public partial class Test
                      {
+                     }
+                     
+                     public interface ITestInterface
+                     {
+                         int GetInt();
                      }
                      """;
 
@@ -57,9 +72,14 @@ public class AutoScopeSnapshotTests
                      
                      namespace TestNamespace.Complex.Nested;
 
-                     [AutoScope]
+                     [AutoScope(typeof(ITestInterface))]
                      public partial class Test
                      {
+                     }
+                     
+                     public interface ITestInterface
+                     {
+                         int GetInt();
                      }
                      """;
 
