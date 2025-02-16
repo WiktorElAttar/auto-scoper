@@ -44,10 +44,15 @@ internal class Emitter(SourceProductionContext context, IReadOnlyList<AutoScopeC
                 var argumentsString = string.Join(
                     ", ",
                     autoScopeMethod.MethodSymbol.Parameters.Select(x => x.Name));
+                var genericTypeParametersString = autoScopeMethod.MethodSymbol.TypeParameters.IsEmpty
+                    ? string.Empty
+                    : "<" + string.Join(
+                        ", ",
+                        autoScopeMethod.MethodSymbol.TypeParameters.Select(x => x.Name)) + ">";
 
                 sb.AppendLine(
                     $$"""
-                        public {{partialString}}{{returnString}} {{methodName}}({{parametersString}})
+                        public {{partialString}}{{returnString}} {{methodName}}{{genericTypeParametersString}}({{parametersString}})
                         {
                             using var scope = global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.CreateScope(AutoScoper.AutoScopeProvider.ServiceProvider);
                             var service = global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<{{interfaceName}}>(scope.ServiceProvider);

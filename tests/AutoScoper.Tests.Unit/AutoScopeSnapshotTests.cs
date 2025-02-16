@@ -15,14 +15,9 @@ public class AutoScopeSnapshotTests
                      {
                      }
                      
-                     [AutoScope(typeof(ITestInterface))]
-                     public partial class Test2
-                     {
-                     }
-                     
                      public interface ITestInterface
                      {
-                         int GetInt();
+                         int GetInt<T>();
                      }
                      """;
 
